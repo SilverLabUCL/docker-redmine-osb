@@ -38,14 +38,15 @@ services:
     - REDMINE_BACKUP_EXPIRY=
     - REDMINE_BACKUP_TIME=
 
-    - SMTP_ENABLED=false
-    - SMTP_METHOD=smtp
-    - SMTP_DOMAIN=www.example.com
-    - SMTP_HOST=smtp.gmail.com
+    - SMTP_ENABLED=true
+    - SMTP_METHOD=async_smtp
+    - SMTP_DOMAIN=ionos.co.uk
+    - SMTP_HOST=smtp.ionos.co.uk
     - SMTP_PORT=587
-    - SMTP_USER=mailer@example.com
-    - SMTP_PASS=password
+    - SMTP_USER=osb@opensourcebrain.org
+    - SMTP_PASS=PASSWORD
     - SMTP_STARTTLS=true
+    - SMTP_TLS=false
     - SMTP_AUTHENTICATION=:login
 
     - IMAP_ENABLED=false
