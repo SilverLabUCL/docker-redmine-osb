@@ -15,7 +15,7 @@ FROM ubuntu:xenial-20180705
 
 LABEL maintainer="sameer@damagehead.com"
 
-ENV RUBY_VERSION=2.5 \
+ENV RUBY_VERSION=2.3 \
     REDMINE_VERSION=3.4.6 \
     REDMINE_USER="redmine" \
     REDMINE_HOME="/home/redmine" \
@@ -40,6 +40,7 @@ RUN apt-get update \
       libmysqlclient20 libpq5 libyaml-0-2 libcurl3 libssl1.0.0 uuid-dev xz-utils \
       libxslt1.1 libffi6 zlib1g gsfonts \
  && update-locale LANG=C.UTF-8 LC_MESSAGES=POSIX \
+ && gem install nokogiri -v 1.6.8.1 \
  && gem install sprockets -v 3.7.2 \
  && gem install rails -v 4.2.7.1 \
  && gem install bundler -v 1.17.3 \
